@@ -19,7 +19,7 @@ export const Text = ({ text, fontSize }) => {
   }, [selected]);
 
   return (
-    <div ref={(ref) => connect(drag(ref))} onClick={() => setEditable(true)}>
+    <div ref={(ref) => connect(drag(ref))} onClick={() => selected && setEditable(true)}>
       <ContentEditable
         disabled={!editable}
         html={text}
